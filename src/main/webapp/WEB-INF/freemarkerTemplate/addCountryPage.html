@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>addCountryPage.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+  country 注册：<br>
+    <form  method="post">
+        <table> 
+            <tbody>
+               <tr>
+                   <td><input type="text" name="cid" placeholder="请输入country编号" /></td>
+               </tr>
+               <tr>
+                  <td><input type="text" name="cname" placeholder="请输入country名字" /></td>
+               </tr>
+               <tr>
+                  <td colspan="2"><button onclick="addCountry();return false;">提交</button></td>
+               </tr>
+            </tbody>
+        </table>
+    </form>
+    <script>
+        function addCountry(){
+            var form = document.getElementsByTagName('form')[0];
+            var cid = document.getElementsByTagName("input")[0].value;
+            form.action = "${request.contextPath}/country/"+cid;
+            form.submit();	
+        }
+    </script>
+  </body>
+</html>

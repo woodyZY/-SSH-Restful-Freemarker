@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="SpringMvc.Hibernate.Freemarker.Restful"
+  id="myeclipse.1502196613582"
+  context-root="/SpringMvc.Hibernate.Freemarker.Restful"
+  j2ee-spec="6.0"
+  archive="SpringMvc.Hibernate.Freemarker.Restful.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+

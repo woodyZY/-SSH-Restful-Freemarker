@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>updateCountryPage.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+    <form id="form" method="post">
+         <input type="hidden" name="_method" value="put" />
+         <input type="hidden" name="cid" value="${cid}" />
+         <table>
+             <tbody>
+                   <tr>
+                        <td><input type="text"  disabled="disabled" name="cid" value="${cid}" /></td>
+                   </tr>
+                   <tr>
+                        <td><input type="text" name="cname" /></td>
+                   </tr>
+                   <tr>
+                        <td><button onclick="updateCountry(${cid});return false;">提交</button></td>
+                   </tr>
+             </tbody>
+         </table>
+    </form>
+    <script>
+        function updateCountry(cid){
+            var form = document.getElementById("form");
+            form.action = "${request.contextPath}/country/"+cid;
+            form.submit();
+        }
+    </script>
+  </body>
+</html>
+                   
